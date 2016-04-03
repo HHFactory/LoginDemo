@@ -1,0 +1,14 @@
+<!-- ログインフォーム -->
+<div class="l-login">
+	<form ng-submit="LoginCtrl.login(LoginCtrl.credentials)" class="form-group">
+		<!-- メールアドレス -->
+		<input type="email" class="form-control" placeholder="メールアドレス" name="mailaddress" ng-model="LoginCtrl.credentials.mailaddress">
+		<!-- パスワード -->
+		<input type="password" class="form-control" placeholder="パスワード" name="password" ng-model="LoginCtrl.credentials.password">
+		<button type="submit" class="l-login-btn btn btn-success">ログイン</button>
+	</form>
+	<!-- 認証失敗時エラーメッセージ -->
+	<div ng-show="LoginCtrl.error">
+		入力されたメールアドレス、パスワードに誤りがあります。
+	</div>
+</div>

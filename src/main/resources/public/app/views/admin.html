@@ -1,0 +1,11 @@
+<div class="l-login">
+	管理者ページ
+	<a ng-click="AdminCtrl.goHome()">ホームへ</a>
+	<table class="table table-striped">
+		<tr ng-repeat="user in AdminCtrl.userList">
+		<td>{{user.name}}</td>
+		<td><button type="button" ng-if="AdminCtrl.hasPermission('create')">編集</button></td>
+		<td><button type="button" ng-if="AdminCtrl.hasPermission('create')">削除</button></td>
+		</tr>
+	</table>
+</div>

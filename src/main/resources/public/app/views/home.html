@@ -1,0 +1,19 @@
+<!-- ナビゲーションエリア -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<!-- ナビゲーション左 -->
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">
+				HHFactory
+			</a>
+		</div>
+		<!-- ナビゲーション右 -->
+		<ul class="nav navbar-nav navbar-right">
+			<li ng-if="HomeCtrl.hasPermission('manageUser')"><a ng-click="HomeCtrl.goAdminPage()">管理ページ</a></li>
+			<li><p class="navbar-text">{{HomeCtrl.userName}}</p></li>
+			<li ><a ng-click="HomeCtrl.logout()"><i class="fa fa-power-off"/></a></li>
+		</ul>
+	</div>
+</nav>
+
+
